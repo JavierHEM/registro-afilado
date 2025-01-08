@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Autenticación básica
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Reglas para tipos_sierra
+    match /tipos_sierra/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+    
+    // Reglas para registro_sierras
+    match /registro_sierras/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+    
+    // Reglas para historial_afilados
+    match /historial_afilados/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+    
+    // Reglas para sucursales
+    match /sucursales/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+  }
+}

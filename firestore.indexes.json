@@ -1,0 +1,28 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "registro_sierras",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "sucursal", "order": "ASCENDING" },
+        { "fieldPath": "ultimoAfilado", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "historial_afilados",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "sierraId", "order": "ASCENDING" },
+        { "fieldPath": "fecha", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "historial_afilados",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "sucursal", "order": "ASCENDING" },
+        { "fieldPath": "fecha", "order": "DESCENDING" }
+      ]
+    }
+  ]
+}
